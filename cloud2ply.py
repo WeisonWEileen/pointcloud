@@ -6,7 +6,7 @@ import numpy as np
 from plyfile import PlyData, PlyElement
 
 i = 0
-folder_name = "./4/"
+folder_name = "./5/"
 
 # def save_point_cloud_to_ply(point_cloud, file_path):
 #     """

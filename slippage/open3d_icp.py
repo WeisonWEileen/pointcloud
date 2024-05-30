@@ -3,6 +3,11 @@
 
 import open3d as o3d
 import numpy as np
+import csv
+
+filename = "test02.csv"
+csvfile = open(filename, 'w', newline='')
+csvwriter = csv.writer(csvfile)
 
 folder = "./4/"
 
@@ -28,8 +33,8 @@ if __name__ == "__main__":
         target = pc_processing(target)
         
         # 设置ICP参数
-        threshold = 0.01  # 设置一个阈值，用于剔除大于该阈值的配准误差点
-        trans_init = np.asarray([[1.0, 0.0, 0.0, 0.0],
+        threshold = 0.003  # 设置一个阈值，用于剔除大于该阈值的配准误差点
+        trans_init = np.asarray([[1.0, 0.0, 0.0, 0.0017],
                                 [0.0, 1.0, 0.0, 0.0],
                                 [0.0, 0.0, 1.0, 0.0],
                                 [0.0, 0.0, 0.0, 1.0]])  # 设置初始的变换矩阵
